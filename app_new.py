@@ -134,7 +134,7 @@ if __name__ == '__main__':
     print("Setting up webhook...")
     app.run_webhook(
         listen="0.0.0.0",  # Listen on all available interfaces
-        port=7860,         # Port to listen on
+        port=8000,         # Port to listen on
         url_path=f"{TOKEN}"  # Use token as the URL path for security
     )
 
