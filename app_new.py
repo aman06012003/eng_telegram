@@ -130,6 +130,14 @@ if __name__ == '__main__':
     # Register error handler
     app.add_error_handler(error)
 
+    # Set up webhook
+    print("Setting up webhook...")
+    app.run_webhook(
+        listen="0.0.0.0",  # Listen on all available interfaces
+        port=7860,         # Port to listen on
+        url_path=f"{TOKEN}"  # Use token as the URL path for security
+    )
+
     # Start polling
     print("Polling...")
     app.run_polling(poll_interval=3)
