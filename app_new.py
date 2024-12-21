@@ -18,6 +18,8 @@ content = docx2txt.process(file_path)
 TOKEN = '8126949340:AAGmr4ByOLlYXtEQuleOsinS2w_wUogldj0'
 BOT_USERNAME = '@eng122_bot'
 
+
+
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Hi there!👋I'm ready to answer your questions. Ask me anything!")
 
@@ -126,7 +128,7 @@ if __name__ == '__main__':
 
     # Register message handler
     app.add_handler(MessageHandler(filters.TEXT, handle_message))
-
+    PORT = int(os.environ.get('PORT', '8443'))
     # Register error handler
     app.add_error_handler(error)
 
