@@ -3,6 +3,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 import pathlib
 import textwrap
 import google.generativeai as genai
+import os
 
 genai.configure(api_key='AIzaSyAytkzRS0Xp0pCyo6WqKJ4m1o330bF-gPk')
 
